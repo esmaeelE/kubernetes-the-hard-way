@@ -17,10 +17,8 @@ All commands will be run as the `root` user. This is being done for the sake of 
 Now that you are logged into the `jumpbox` machine as the `root` user, you will install the command line utilities that will be used to preform various tasks throughout the tutorial.
 
 ```bash
-{
-  apt-get update
-  apt-get -y install wget curl vim openssl git
-}
+  apt update
+  apt -y install wget curl vim openssl git
 ```
 
 ### Sync GitHub Repository
@@ -48,7 +46,13 @@ pwd
 /root/kubernetes-the-hard-way
 ```
 
+
 ### Download Binaries
+
+Download from release page on Github
+
+Copy binary files to a directory
+
 
 In this section you will download the binaries for the various Kubernetes components. The binaries will be stored in the `downloads` directory on the `jumpbox`, which will reduce the amount of internet bandwidth required to complete this tutorial as we avoid downloading the binaries multiple times for each machine in our Kubernetes cluster.
 
@@ -77,7 +81,6 @@ ls -oh downloads
 Extract the component binaries from the release archives and organize them under the `downloads` directory.
 
 ```bash
-{
   ARCH=$(dpkg --print-architecture)
   mkdir -p downloads/{client,cni-plugins,controller,worker}
   tar -xvf downloads/crictl-v1.32.0-linux-${ARCH}.tar.gz \
@@ -97,9 +100,10 @@ Extract the component binaries from the release archives and organize them under
     downloads/controller/
   mv downloads/{kubelet,kube-proxy} downloads/worker/
   mv downloads/runc.${ARCH} downloads/worker/runc
-}
 ```
 
+
+Dont run this shitty command
 ```bash
 rm -rf downloads/*gz
 ```
@@ -107,9 +111,7 @@ rm -rf downloads/*gz
 Make the binaries executable.
 
 ```bash
-{
-  chmod +x downloads/{client,cni-plugins,controller,worker}/*
-}
+chmod +x downloads/{client,cni-plugins,controller,worker}/*
 ```
 
 ### Install kubectl
@@ -119,9 +121,7 @@ In this section you will install the `kubectl`, the official Kubernetes client c
 Use the `chmod` command to make the `kubectl` binary executable and move it to the `/usr/local/bin/` directory:
 
 ```bash
-{
-  cp downloads/client/kubectl /usr/local/bin/
-}
+sudo cp downloads/client/kubectl /usr/local/bin/
 ```
 
 At this point `kubectl` is installed and can be verified by running the `kubectl` command:

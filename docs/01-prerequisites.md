@@ -31,3 +31,13 @@ ID=debian
 ```
 
 Next: [setting-up-the-jumpbox](02-jumpbox.md)
+
+I use Debian 13 as base system for this tutorial
+
+
+All systems are debian 13 trixie
+username: user
+password: user
+
+
+

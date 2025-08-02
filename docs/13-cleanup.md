@@ -8,4 +8,4 @@ Previous versions of this guide made use of GCP resources for various aspects of
 
 Clean up is as simple as deleting all virtual machines you created for this exercise.
 
-Next: [Start Over](../README.md)
+Next: [Start Over](a_KUBER/scratch/kubernetes-the-hard-way/README.md)

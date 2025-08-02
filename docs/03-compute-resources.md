@@ -1,10 +1,22 @@
 # Provisioning Compute Resources
 
-Kubernetes requires a set of machines to host the Kubernetes control plane and the worker nodes where containers are ultimately run. In this lab you will provision the machines required for setting up a Kubernetes cluster.
+Goals:
+- We want to run Kubernetes Cluster on Bare metal to implement redundancy
+- We do all steps manually
+
+
+Kubernetes requires a set of machines to host the Kubernetes 
+- control plane and 
+- the worker nodes
+where containers are ultimately run. 
+
+In this lab you will provision the machines required for setting up a Kubernetes cluster.
 
 ## Machine Database
 
-This tutorial will leverage a text file, which will serve as a machine database, to store the various machine attributes that will be used when setting up the Kubernetes control plane and worker nodes. The following schema represents entries in the machine database, one entry per line:
+This tutorial will leverage a text file, which will serve as a machine database, to store the various machine attributes that will be used when setting up the Kubernetes control plane and worker nodes. 
+
+The following schema represents entries in the machine database, one entry per line:
 
 ```text
 IPV4_ADDRESS FQDN HOSTNAME POD_SUBNET
@@ -24,7 +36,9 @@ XXX.XXX.XXX.XXX node-0.kubernetes.local node-0 10.200.0.0/24
 XXX.XXX.XXX.XXX node-1.kubernetes.local node-1 10.200.1.0/24
 ```
 
-Now it's your turn to create a `machines.txt` file with the details for the three machines you will be using to create your Kubernetes cluster. Use the example machine database from above and add the details for your machines.
+Now it's your turn to create a `machines.txt` file with the details for the three machines you will be using to create your Kubernetes cluster. 
+
+Use the example machine database from above and add the details for your machines.
 
 ## Configuring SSH Access
 
