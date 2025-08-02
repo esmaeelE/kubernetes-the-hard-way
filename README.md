@@ -28,16 +28,23 @@ Component versions:
 
 This tutorial requires four (4) ARM64 or AMD64 based virtual or physical machines connected to the same network.
 
+---
+* [kubernets 101](00-kubernets%20101.md)
 * [Prerequisites](01-prerequisites.md)
 * [Setting up the Jumpbox](02-jumpbox.md)
 * [Provisioning Compute Resources](03-compute-resources.md)
+---
 * [Provisioning the CA and Generating TLS Certificates](04-certificate-authority.md)
 * [Generating Kubernetes Configuration Files for Authentication](05-kubernetes-configuration-files.md)
 * [Generating the Data Encryption Config and Key](06-data-encryption-keys.md)
+---
 * [Bootstrapping the etcd Cluster](07-bootstrapping-etcd.md)
 * [Bootstrapping the Kubernetes Control Plane](08-bootstrapping-kubernetes-controllers.md)
 * [Bootstrapping the Kubernetes Worker Nodes](09-bootstrapping-kubernetes-workers.md)
+---
 * [Configuring kubectl for Remote Access](10-configuring-kubectl.md)
 * [Provisioning Pod Network Routes](11-pod-network-routes.md)
+---
 * [Smoke Test](12-smoke-test.md)
 * [Cleaning Up](13-cleanup.md)
+---

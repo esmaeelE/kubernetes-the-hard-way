@@ -8,6 +8,5 @@
 - Run ansible machine to make it fast work
 - write note ASAP
 - make this repository kubernetes playground
-- 
 
 
